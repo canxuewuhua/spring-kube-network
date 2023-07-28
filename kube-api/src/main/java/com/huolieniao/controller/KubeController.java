@@ -16,7 +16,7 @@ public class KubeController {
 
     @GetMapping("msg")
     public String getKubeMsg(){
-        log.info("日志打印....");
+        log.info("getKubeMsg 方法 日志打印....");
         return kubeMsg;
     }
 }
