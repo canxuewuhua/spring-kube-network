@@ -3,3 +3,12 @@ server:
 
 kube:
   msg: hello kube
+
+#spring:
+#  elasticsearch:
+#    rest:
+#      uris: 10.12.100.57:9200,10.12.100.58:9200,10.12.100.59:9200
+#      username: meishiyi
+#      password: Dajie123!@#
+#      connection-timeout: 2000
+#      read-timeout: 2000
