@@ -22,6 +22,7 @@ JSON.parseArray(params, SingleSwitch.class)
 
 > 读取对象
 JSON.parseObject(param, Addr.class)
+> ![img.png](img.png)
 
 
 事务失效的几个场景  @Transactional注解
