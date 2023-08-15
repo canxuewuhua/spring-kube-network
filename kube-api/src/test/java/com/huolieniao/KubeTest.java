@@ -1,9 +1,9 @@
 package com.huolieniao;
 
 import com.huolieniao.service.TalentService;
+import org.springframework.beans.factory.annotation.Autowired;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,5 +17,10 @@ public class KubeTest extends BaseTest{
     @Test
     public void testTalentIndex(){
         talentService.buildTalentIndex();
+    }
+
+    @Test
+    public void testQueryTalentEntity(){
+        talentService.queryTalentEntity();
     }
 }

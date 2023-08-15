@@ -7,7 +7,6 @@ import com.huolieniao.annotation.Profile;
 import com.huolieniao.domain.Addr;
 import com.huolieniao.domain.Person;
 import com.huolieniao.domain.SingleSwitch;
-import com.huolieniao.service.ApolloConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,18 +29,18 @@ public class KubeController {
 
 
 
-    @Autowired
-    private ApolloConfig apolloConfig;
-
-    @GetMapping("addr")
-    public String getApolloConfig(){
-        log.info("getApolloConfig 方法 日志打印....");
-        String addr = apolloConfig.getAddr();
-        List<String> storeList = apolloConfig.getStoreList();
-        Map<String, SingleSwitch> allSwithchMap = apolloConfig.getAllSwithchMap();
-        Addr address = apolloConfig.getAddress();
-        return "addr:" + addr + "storeList: " + storeList + "allSwithchMap: "+ allSwithchMap + "address:" + address;
-    }
+//    @Autowired
+//    private ApolloConfig apolloConfig;
+//
+//    @GetMapping("addr")
+//    public String getApolloConfig(){
+//        log.info("getApolloConfig 方法 日志打印....");
+//        String addr = apolloConfig.getAddr();
+//        List<String> storeList = apolloConfig.getStoreList();
+//        Map<String, SingleSwitch> allSwithchMap = apolloConfig.getAllSwithchMap();
+//        Addr address = apolloConfig.getAddress();
+//        return "addr:" + addr + "storeList: " + storeList + "allSwithchMap: "+ allSwithchMap + "address:" + address;
+//    }
 
     @GetMapping("msg")
     public String getKubeMsg(){
