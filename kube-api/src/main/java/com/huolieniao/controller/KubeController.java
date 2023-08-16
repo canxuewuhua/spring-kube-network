@@ -7,6 +7,7 @@ import com.huolieniao.annotation.Profile;
 import com.huolieniao.domain.Addr;
 import com.huolieniao.domain.Person;
 import com.huolieniao.domain.SingleSwitch;
+import com.huolieniao.service.DownLoadDataService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +28,8 @@ import java.util.Map;
 @Slf4j
 public class KubeController {
 
+    @Autowired
+    private DownLoadDataService downLoadDataService;
 
 
 //    @Autowired
@@ -46,6 +49,12 @@ public class KubeController {
     public String getKubeMsg(){
         log.info("getKubeMsg 方法 日志打印....");
         return "kubeMsg";
+    }
+
+    @GetMapping("async")
+    public String getAsync(){
+        downLoadDataService.executeDownLoad();
+        return "ok";
     }
 
     @ApiAuth(value = "XMJR", country = "zhongguo")
