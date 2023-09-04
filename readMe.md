@@ -84,6 +84,14 @@ watchDog 机制其实就是一个后台定时任务线程，获取锁成功之�
 
 自动续期 启动守护线程，去重新设置这个锁的LockTime，在redisson实例被关闭前 不断延长锁的有效期
 
+SPI机制
+---------
+ java.sql.Driver在ServiceLoader加载这个Driver时，它会加载这个文件中写的com.mysql.cj.jdbc.Driver实现类
+这个实现类就是定义的加载驱动的实现
+
+ServiceLoader加载META-INF/services下的interface  然后interface的实现类写在该文件的内容中，需要去实现的类
+spi的好处：扩展机制
+Java中定义了接口 但没有具体的实现，具体的实现都是由不同厂商来提供的
 
 
 
