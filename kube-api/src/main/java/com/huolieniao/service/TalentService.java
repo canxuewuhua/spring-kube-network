@@ -20,7 +20,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+//@Service
 @Slf4j
 public class TalentService {
 
