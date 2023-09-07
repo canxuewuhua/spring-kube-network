@@ -49,6 +49,8 @@ Spring 事务传播机制 7种
 首先在方法上要引入注解 @Async注解  其次要在启动类上添加@EnableAsync 使异步注解生效
 其次注意：异步要使用代理类 所以不能在同一个类中进行调用 或者引入自己这个类去调用
 
+加注：    @Async注解不能使用默认的线程池 因为默认的是无界队列 会导致OOM，所以需要自定义线程池 ThreadPoolConfig进行设置
+
 >> 异步下载
 
 异步下载 使用异步方法 先进行响应 之后后台执行异步方法，等到执行完毕进行生成excel 进行保存值指定的文件夹下
@@ -92,6 +94,15 @@ SPI机制
 ServiceLoader加载META-INF/services下的interface  然后interface的实现类写在该文件的内容中，需要去实现的类
 spi的好处：扩展机制
 Java中定义了接口 但没有具体的实现，具体的实现都是由不同厂商来提供的
+
+线程的几种状态7
+new - 新建
+runnable 可运行
+running 运行中
+blocked 阻塞
+waiting 等待
+timed_waiting超时等待
+terminated 终结
 
 
 
